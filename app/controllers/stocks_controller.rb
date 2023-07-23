@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class StocksController < ApplicationController
-  before_action :set_stock, only: %i[ show edit update destroy ]
+  before_action :set_stock, only: %i[show edit update destroy]
 
   # GET /stocks or /stocks.json
   def index
@@ -7,8 +9,7 @@ class StocksController < ApplicationController
   end
 
   # GET /stocks/1 or /stocks/1.json
-  def show
-  end
+  def show; end
 
   # GET /stocks/new
   def new
@@ -16,8 +17,7 @@ class StocksController < ApplicationController
   end
 
   # GET /stocks/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /stocks or /stocks.json
   def create
@@ -25,7 +25,7 @@ class StocksController < ApplicationController
 
     respond_to do |format|
       if @stock.save
-        format.html { redirect_to stock_url(@stock), notice: "Stock was successfully created." }
+        format.html { redirect_to stock_url(@stock), notice: 'Stock was successfully created.' }
         format.json { render :show, status: :created, location: @stock }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class StocksController < ApplicationController
   def update
     respond_to do |format|
       if @stock.update(stock_params)
-        format.html { redirect_to stock_url(@stock), notice: "Stock was successfully updated." }
+        format.html { redirect_to stock_url(@stock), notice: 'Stock was successfully updated.' }
         format.json { render :show, status: :ok, location: @stock }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +52,20 @@ class StocksController < ApplicationController
     @stock.destroy
 
     respond_to do |format|
-      format.html { redirect_to stocks_url, notice: "Stock was successfully destroyed." }
+      format.html { redirect_to stocks_url, notice: 'Stock was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_stock
-      @stock = Stock.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def stock_params
-      params.require(:stock).permit(:name, :price)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_stock
+    @stock = Stock.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def stock_params
+    params.require(:stock).permit(:name, :price)
+  end
 end
