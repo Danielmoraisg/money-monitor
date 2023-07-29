@@ -84,6 +84,10 @@ GEM
       xpath (~> 3.2)
     concurrent-ruby (1.2.2)
     crass (1.0.6)
+    database_cleaner-active_record (2.1.0)
+      activerecord (>= 5.a)
+      database_cleaner-core (~> 2.0.0)
+    database_cleaner-core (2.0.1)
     date (3.3.3)
     debug (1.8.0)
       irb (>= 1.5.0)
@@ -217,6 +221,10 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    simple_command (1.0.1)
+    spring (4.1.1)
+    spring-commands-rspec (1.0.4)
+      spring (>= 0.9.1)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -258,6 +266,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   capybara
+  database_cleaner-active_record
   debug
   importmap-rails
   jbuilder
@@ -267,6 +276,8 @@ DEPENDENCIES
   rspec-rails (~> 6.0.0)
   rubocop-rails
   selenium-webdriver
+  simple_command
+  spring-commands-rspec
   sprockets-rails
   stimulus-rails
   turbo-rails
