@@ -12,13 +12,33 @@
   <% end %>
 
   <div>
+    <%= form.label :id, style: "display: block" %>
+    <%= form.text_field :id %>
+  </div>
+
+  <div>
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
 
   <div>
-    <%= form.label :price, style: "display: block" %>
-    <%= form.number_field :price %>
+    <%= form.label :ticker, style: "display: block" %>
+    <%= form.text_field :ticker %>
+  </div>
+
+  <div>
+    <%= form.label :happened_at, style: "display: block" %>
+    <%= form.datetime_field :happened_at %>
+  </div>
+
+  <div>
+    <%= form.label :total_value, style: "display: block" %>
+    <%= form.text_field :total_value %>
+  </div>
+
+  <div>
+    <%= form.label :quantity, style: "display: block" %>
+    <%= form.text_field :quantity %>
   </div>
 
   <div>

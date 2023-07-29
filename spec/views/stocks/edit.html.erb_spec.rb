@@ -5,8 +5,11 @@ require 'rails_helper'
 RSpec.describe 'stocks/edit', type: :view do
   let(:stock) do
     Stock.create!(
+      id: '',
       name: 'MyString',
-      price: 1
+      ticker: 'MyString',
+      total_value: 1.5,
+      quantity: 1.5
     )
   end
 
@@ -18,9 +21,15 @@ RSpec.describe 'stocks/edit', type: :view do
     render
 
     assert_select 'form[action=?][method=?]', stock_path(stock), 'post' do
+      assert_select 'input[name=?]', 'stock[id]'
+
       assert_select 'input[name=?]', 'stock[name]'
 
-      assert_select 'input[name=?]', 'stock[price]'
+      assert_select 'input[name=?]', 'stock[ticker]'
+
+      assert_select 'input[name=?]', 'stock[total_value]'
+
+      assert_select 'input[name=?]', 'stock[quantity]'
     end
   end
 end
