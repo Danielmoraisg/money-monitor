@@ -77,3 +77,5 @@ end
 group :local do
   gem 'rubocop-rails', require: false
 end
+
+gem 'bcrypt', '~> 3.1.7'
