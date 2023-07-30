@@ -14,7 +14,7 @@ RSpec.describe CreateStock do
       quantity: 10.0
     }
   end
-  describe '.call' do
+  context 'when succeding' do
     it 'succeeds' do
       expect(create_stock).to be_success
       expect(Stock.find_by(name: 'test_stock')).to have_attributes(stock_attributes)

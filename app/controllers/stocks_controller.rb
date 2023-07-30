@@ -21,7 +21,7 @@ class StocksController < ApplicationController
 
   # POST /stocks or /stocks.json
   def create
-    @stock = CreateStock(stock_attributes: stock_params)
+    @stock = CreateStock(stock_attributes:)
 
     respond_to do |format|
       if @stock.save
@@ -37,7 +37,7 @@ class StocksController < ApplicationController
   # PATCH/PUT /stocks/1 or /stocks/1.json
   def update
     respond_to do |format|
-      if @stock.update(stock_params)
+      if @stock.update(stock_attributes)
         format.html { redirect_to stock_url(@stock), notice: 'Stock was successfully updated.' }
         format.json { render :show, status: :ok, location: @stock }
       else
@@ -65,7 +65,7 @@ class StocksController < ApplicationController
   end
 
   # Only allow a list of trusted parameters through.
-  def stock_params
+  def stock_attributes
     params.require(:stock).permit(:id, :name, :ticker, :happened_at, :total_value, :quantity)
   end
 end
