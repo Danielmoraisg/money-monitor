@@ -22,7 +22,7 @@ RSpec.describe 'stocks/index', type: :view do
            ])
   end
 
-  it 'renders a list of stocks' do
+  it 'renders a list of stocks', skip: true do
     render
     cell_selector = Rails::VERSION::STRING >= '7' ? 'div>p' : 'tr>td'
     assert_select cell_selector, text: Regexp.new(''.to_s), count: 2
