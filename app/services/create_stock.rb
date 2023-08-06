@@ -3,11 +3,11 @@
 class CreateStock
   prepend SimpleCommand
 
-  def initialize(user_attributes:)
-    @user_attributes = user_attributes
+  def initialize(stock_attributes:)
+    @stock_attributes = stock_attributes
   end
 
   def call
-    User.create! @user_attributes
+    Stock.create! @stock_attributes
   end
 end
