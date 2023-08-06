@@ -2,11 +2,11 @@
 
 require 'rails_helper'
 
-RSpec.describe UpdateStock do
+RSpec.describe DeleteStock do
   subject(:delete_stock) { described_class.call(id:) }
 
   context 'when stock exists' do
-    let(:id) { create(:stock, name:).id }
+    let(:id) { create(:stock).id }
 
     before do
       delete_stock
