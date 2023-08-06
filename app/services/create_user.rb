@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class CreateStock
+class CreateUser
   prepend SimpleCommand
 
   def initialize(user_attributes:)
