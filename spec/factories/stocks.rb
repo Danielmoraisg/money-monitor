@@ -10,8 +10,5 @@ FactoryBot.define do
     created_at { Time.now }
     updated_at { Time.now }
 
-    trait :with_specific_id do
-      id { 42 }
-    end
   end
 end

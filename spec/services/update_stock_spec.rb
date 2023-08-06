@@ -10,10 +10,8 @@ RSpec.describe UpdateStock do
   let(:new_value) { 'new stock name' }
 
   context 'when stock exists' do
-    let(:id) { 42 }
-    before do
-      create(:stock, :with_specific_id, name:)
-    end
+    let(:stock) { create(:stock, name:) }
+    let(:id) { stock.id }
 
     it 'updates the value' do
       expect { update_stock }
