@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe DeleteStock do
+RSpec.describe Stocks::DeleteStock do
   subject(:delete_stock) { described_class.call(id:) }
 
   context 'when stock exists' do

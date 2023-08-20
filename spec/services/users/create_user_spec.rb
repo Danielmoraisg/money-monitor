@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe CreateUser do
+RSpec.describe Users::CreateUser do
   subject(:create_user) { described_class.call(user_attributes:) }
 
   let(:user_attributes) do

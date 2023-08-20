@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe DeleteUser do
+RSpec.describe Users::DeleteUser do
   subject(:delete_user) { described_class.call(id:) }
 
   context 'when user exists' do

@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe AddStockToPortifolio do
+RSpec.describe Stocks::AddStockToPortifolio do
   subject(:add_stock_to_portifolio) { described_class.call(user_id:, stock_id:) }
 
   let(:stock_id) { create(:stock).id }

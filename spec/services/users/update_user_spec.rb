@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe UpdateUser do
+RSpec.describe Users::UpdateUser do
   subject(:update_user) { described_class.call(id:, user_attribute:, new_value:) }
 
   let(:name) { 'test_user' }

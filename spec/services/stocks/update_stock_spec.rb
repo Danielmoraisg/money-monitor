@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe UpdateStock do
+RSpec.describe Stocks::UpdateStock do
   subject(:update_stock) { described_class.call(id:, stock_attribute:, new_value:) }
 
   let(:name) { 'test_stock' }

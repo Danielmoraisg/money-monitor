@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe CreateStock do
+RSpec.describe Stocks::CreateStock do
   subject(:create_stock) { described_class.call(stock_attributes:) }
 
   let(:stock_attributes) do

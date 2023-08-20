@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe SearchStockByAttribute do
+RSpec.describe Stocks::SearchStockByAttribute do
   subject(:search_stock) { described_class.call(attribute:, value:) }
 
   let(:attribute) { 'name' }
